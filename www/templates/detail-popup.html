@@ -1,0 +1,36 @@
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="../img/adam.jpg">
+    <h2>{{details.name}}</h2>
+    <p>{{details.date}}</p>
+    <!-- <p>{{details.date | date}}</p> -->
+  </div>
+
+  <div class="item item-body">
+    <!-- <img class="full-image" src="../img/mike.png"> -->
+    <p>
+      {{details.desc}}
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" ng-click="setDetails(2015)">
+      <i class="icon ion-thumbsup"></i>
+      2015
+    </a>
+    <a class="tab-item" ng-click="setDetails(2016)">
+      <i class="icon ion-chatbox"></i>
+      2016
+    </a>
+    <a class="tab-item" ng-click="setDetails(2017)">
+      <i class="icon ion-share"></i>
+      2017
+    </a>
+  </div>
+
+</div>
