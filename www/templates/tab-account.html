@@ -1,9 +1,10 @@
-<ion-view view-title="Playlist">
+<ion-view view-title="The Holiday List">
    <ion-content>
       <ion-list>
-         <ion-item ng-repeat="(row, value) in rows">
-         <!-- ng-click="row" -->
-            {{row}}
+         <ion-item class="item-avatar" ng-repeat="(holidayId, holiday) in rows" ng-click="open(holidayId)">
+            <span>{{holiday.date | date: 'dd'}}</span>
+            <h2>{{holiday.name}}</h2>
+            <p>{{holiday.date | date: 'EEEE yyyy'}} </p>
          </ion-item>
       </ion-list>
    </ion-content>

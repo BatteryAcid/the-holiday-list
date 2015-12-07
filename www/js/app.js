@@ -17,16 +17,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
-  // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html', 
+    controller: function($scope, Services) {
+      $scope.years = Services.getCurrentYearList();
+    }
   })
-
-  // Each tab has its own nav history stack:
-
   .state('tab.dash', {
     url: '/dash',
     views: {
@@ -36,7 +34,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -55,8 +52,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   });
-
-  // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/chats');
 
 });
+
+//declare services module
+angular.module('starter.services', []);
+

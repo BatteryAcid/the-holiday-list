@@ -24,7 +24,7 @@
 
       //exposed functions
       function setDetails(year) {
-         Services.getRows(year);
+         Services.getHolidaysForYear(year);
          vm.details = Services.getCurrentDetails()
       }
 
