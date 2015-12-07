@@ -13,6 +13,10 @@
          "groundhogday": {
            "name": "Groundhog Day",
            "desc": "A tradition to predict the length"
+         },
+         "otherday": {
+           "name": "Groundhog Day",
+           "desc": "A tradition to predict the length"
          }
       };
 

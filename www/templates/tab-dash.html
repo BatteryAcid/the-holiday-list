@@ -1,11 +1,14 @@
 <ion-view view-title="The Holiday List">
    <ion-content>
       <ion-list>
-         <ion-item class="item-avatar" ng-repeat="(holidayId, holiday) in rows" ng-click="open(holidayId)">
+         
+         <ion-item auto-list-divider auto-list-divider-value="{{holiday.date}}" auto-list-divider-function="dividerFunction" class="item-avatar" 
+            ng-repeat="(holidayId, holiday) in rows" ng-click="open(holidayId)">
             <span>{{holiday.date | date: 'dd'}}</span>
             <h2>{{holiday.name}}</h2>
             <p>{{holiday.date | date: 'EEEE yyyy'}} </p>
          </ion-item>
+
       </ion-list>
    </ion-content>
 </ion-view>
