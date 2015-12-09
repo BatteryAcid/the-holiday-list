@@ -5,9 +5,9 @@
    padding-top: 10px;
 }
 
-.item-avatar span {
+.item-avatar >span {
    position: absolute;
-   top: 24px;
+   top: 15px;
    left: 16px;
    max-width: 40px;
    max-height: 40px;
@@ -16,4 +16,29 @@
    border-radius: 50%;
    text-align: center;
    font-size: 30px;
+}
+
+.short-month {
+   font-size: 14px;
+   padding-bottom: 5px;
+}
+
+
+[nav-view-transition="ios"] [nav-view="active"], 
+[nav-view-transition="ios"][nav-view-direction="forward"] [nav-view="entering"], 
+[nav-view-transition="ios"][nav-view-direction="back"] [nav-view="leaving"] {
+   z-index: 0;
+}
+
+.holiday-header {
+   background-color: #43D049;
+   color: #FFF;
+}
+
+.bar.bar-stable {
+   background-color: #43D049;
+}
+
+.bar.bar-stable .title {
+   color: #FFF;
 }

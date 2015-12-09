@@ -19,40 +19,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   $stateProvider
     .state('tab', {
     url: '/tab',
-    abstract: true,
     templateUrl: 'templates/tabs.html', 
-    controller: function($scope, Services) {
+    controller: function($scope, Services, Popover) {
       $scope.years = Services.getCurrentYearList();
-    }
-  })
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
+      $scope.rows = Services.getHolidaysForYear($scope.years[1]);
+      
+      $scope.changeYear = function(year) {
+        $scope.rows = Services.getHolidaysForYear(year);
+      };
+
+      $scope.open = function(row) {
+        Popover.open(Services.getDetails(row));
+      };
     }
   });
-  $urlRouterProvider.otherwise('/tab/chats');
+  $urlRouterProvider.otherwise('/tab');
 
 });
 

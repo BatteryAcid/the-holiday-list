@@ -17,9 +17,9 @@
             "otherday": "2016-08-20"
          },
          2017: {
-            "newyearsday": "2017-11-22",
-            "groundhogday": "2017-08-17",
-            "otherday": "2017-08-20"
+            "newyearsday": "2017-11-02",
+            "groundhogday": "2017-08-09",
+            "otherday": "2017-08-12"
          }
       };
 

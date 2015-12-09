@@ -5,11 +5,11 @@ angular.module('ionic.ion.autoListDivider',[])
 
     return {
         link: function(scope, element, attrs) {
+
             var key = attrs.autoListDividerValue;
 
             var defaultDivideFunction = function(k){
-                return k.toUpperCase();
-                //return k.slice( 0, 1 ).toUpperCase();
+                return k.slice( 0, 1 ).toUpperCase();
             }
       
             var doDivide = function(){
