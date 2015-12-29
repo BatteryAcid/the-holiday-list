@@ -116,7 +116,7 @@
         },
         "eidalFitr": {
           "name": "Eid al-Fitr",
-          "desc": "Tree days Islamic celebration starting on the first day of the month of Shawwal. It marks the end of the month long fast of Ramadan. The holiday begins at the sunset on the date listed. The actual date may vary depending on regional customs and moon observations."
+          "desc": "Three days Islamic celebration starting on the first day of the month of Shawwal. It marks the end of the month long fast of Ramadan. The holiday begins at the sunset on the date listed. The actual date may vary depending on regional customs and moon observations."
         },
         "independenceDay": {
           "name": "Independence Day",
